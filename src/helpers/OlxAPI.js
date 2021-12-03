@@ -2,7 +2,7 @@ const OlxAPI = {
 
     login: async (email, password) => {
         //consulta bd
-        return {}
+        return {error:' in development'}
     }
 }
 
