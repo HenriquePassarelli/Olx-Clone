@@ -16,7 +16,7 @@ const Page = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         setDisable(true)
-
+        setError('')
         const json = await api.login(email, password);
 
         if (json.error) {
@@ -25,6 +25,8 @@ const Page = () => {
             doLogin(json.token, rememberPassword)
             window.location.href = '/';
         }
+        setDisable(false)
+
     }
     return (
         <PageContainer>
